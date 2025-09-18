@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-combined_access_speed.py — Momentum‑based Access + Speed Control (SUMO/TRACI)
+cas-control-sim.pu — Momentum‑based Access + Speed Control (SUMO/TRACI)
 ───────────────────────────────────────────────────────────────────────────────
 This single script reproduces six scenarios on ONE road network where:
   A) Baseline (no access control, no speed control)
@@ -30,11 +30,11 @@ What this script does per step (1 s):
   • Logs core time series and saves an .npz per scenario under ./results/.
 
 Minimal usage:
-    $ python combined_access_speed.py --sumo-cfg config.sumocfg --scenario ALL
+    $ python cas-control-sim.pu --sumo-cfg config.sumocfg --scenario ALL
     # or run a single case, GUI on, shorter run, different demand
-    $ python combined_access_speed.py -g -S B --steps 600 --p-spawn 0.3
+    $ python cas-control-sim.pu -g -S B --steps 600 --p-spawn 0.3
     # speed up by running runs in parallel (e.g., 4 workers)
-    $ python combined_access_speed.py -S D --runs 12 -j 4
+    $ python cas-control-sim.pu -S D --runs 12 -j 4
 
 Key outputs (./results/*_stats.npz):
     e[k]                : controller error (veh/min) (if access enabled)
