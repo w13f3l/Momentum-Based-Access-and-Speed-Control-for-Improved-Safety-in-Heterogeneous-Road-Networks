@@ -1,0 +1,6 @@
+<!-- simulation.sumocfg -->
+<input>
+    <net-file value="network.xml"/>
+    <route-files value="traffic.rou.xml"/>
+    <additional-files value="detectors.add.xml"/>
+</input>

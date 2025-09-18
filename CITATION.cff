@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: If you use this project, please cite it as below.
+title: Momentum-Based Access and Speed Control for Improved Safety in Heterogeneous Road Networks
+url: https://arxiv.org/abs/2509.12944
+identifiers:
+  - type: arXiv
+    value: 2509.12944
+authors:
+  - family-names: Wieberneit
+    given-names: Felix
+  - family-names: Crisostomi
+    given-names: Emanuele
+  - family-names: Griggs
+    given-names: Wynita
+  - family-names: Shorten
+    given-names: Robert
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Wieberneit
+      given-names: Felix
+    - family-names: Crisostomi
+      given-names: Emanuele
+    - family-names: Griggs
+      given-names: Wynita
+    - family-names: Shorten
+      given-names: Robert
+  title: Momentum-Based Access and Speed Control for Improved Safety in Heterogeneous Road Networks
+  year: 2025
+  archive-prefix: arXiv
+  eprint: 2509.12944
+  url: https://arxiv.org/abs/2509.12944
+  identifiers:
+    - type: arXiv
+      value: 2509.12944

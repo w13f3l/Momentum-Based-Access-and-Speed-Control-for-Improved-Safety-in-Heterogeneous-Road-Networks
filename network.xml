@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-09-02 14:20:45 by Eclipse SUMO netconvert Version 1.23.1
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="nodes.xml"/>
+        <edge-files value="edges.xml"/>
+    </input>
+
+    <output>
+        <output-file value="network_large.net.xml"/>
+    </output>
+
+</netconvertConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,200.00" convBoundary="0.00,0.00,1000.00,200.00" origBoundary="0.00,-200.00,1000.00,0.00" projParameter="!"/>
+
+    <edge id=":j_split_0" function="internal">
+        <lane id=":j_split_0_0" index="0" speed="25.00" length="46.70" shape="169.22,198.40 176.39,197.30 188.40,194.60 202.19,191.22 214.74,188.07"/>
+        <lane id=":j_split_0_1" index="1" speed="25.00" length="46.90" shape="169.22,198.40 176.52,197.78 188.79,196.15 202.85,193.84 215.52,191.17"/>
+        <lane id=":j_split_0_2" index="2" speed="25.00" length="47.33" shape="169.22,198.40 176.64,198.27 189.17,197.70 203.50,196.46 216.29,194.28"/>
+    </edge>
+    <edge id=":j_split_3" function="internal">
+        <lane id=":j_split_3_0" index="0" speed="13.90" length="47.58" shape="169.22,198.40 216.80,198.40"/>
+    </edge>
+
+    <edge id="alt" from="j_split" to="n_altEnd" priority="-1">
+        <lane id="alt_0" index="0" speed="13.90" length="183.20" shape="216.80,198.40 400.00,198.40"/>
+    </edge>
+    <edge id="gate" from="n_gateStart" to="j_split" priority="-1">
+        <lane id="gate_0" index="0" speed="13.90" length="169.22" shape="0.00,198.40 169.22,198.40"/>
+    </edge>
+    <edge id="main" from="j_split" to="n_mainEnd" priority="-1">
+        <lane id="main_0" index="0" speed="36.10" length="807.43" shape="214.74,188.07 998.06,-7.76"/>
+        <lane id="main_1" index="1" speed="36.10" length="807.43" shape="215.52,191.17 998.84,-4.66"/>
+        <lane id="main_2" index="2" speed="36.10" length="807.43" shape="216.29,194.28 999.61,-1.55"/>
+    </edge>
+
+    <junction id="j_split" type="priority" x="200.00" y="200.00" incLanes="gate_0" intLanes=":j_split_0_0 :j_split_0_1 :j_split_0_2 :j_split_3_0" shape="216.80,200.00 216.80,196.80 216.68,195.83 214.35,186.52 204.82,189.23 197.81,191.68 192.04,193.76 186.22,195.38 179.04,196.43 169.22,196.80 169.22,200.00">
+        <request index="0" response="0000" foes="0000" cont="0"/>
+        <request index="1" response="0000" foes="0000" cont="0"/>
+        <request index="2" response="0000" foes="0000" cont="0"/>
+        <request index="3" response="0000" foes="0000" cont="0"/>
+    </junction>
+    <junction id="n_altEnd" type="dead_end" x="400.00" y="200.00" incLanes="alt_0" intLanes="" shape="400.00,196.80 400.00,200.00"/>
+    <junction id="n_gateStart" type="dead_end" x="0.00" y="200.00" incLanes="" intLanes="" shape="0.00,200.00 0.00,196.80"/>
+    <junction id="n_mainEnd" type="dead_end" x="1000.00" y="0.00" incLanes="main_0 main_1 main_2" intLanes="" shape="997.67,-9.31 1000.00,-0.00"/>
+
+    <connection from="gate" to="main" fromLane="0" toLane="0" via=":j_split_0_0" dir="R" state="M"/>
+    <connection from="gate" to="main" fromLane="0" toLane="1" via=":j_split_0_1" dir="R" state="M"/>
+    <connection from="gate" to="main" fromLane="0" toLane="2" via=":j_split_0_2" dir="R" state="M"/>
+    <connection from="gate" to="alt" fromLane="0" toLane="0" via=":j_split_3_0" dir="s" state="M"/>
+
+    <connection from=":j_split_0" to="main" fromLane="0" toLane="0" dir="R" state="M"/>
+    <connection from=":j_split_0" to="main" fromLane="1" toLane="1" dir="R" state="M"/>
+    <connection from=":j_split_0" to="main" fromLane="2" toLane="2" dir="R" state="M"/>
+    <connection from=":j_split_3" to="alt" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

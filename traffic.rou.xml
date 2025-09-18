@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <!-- 1. VEHICLE TYPES  -->
+
+    <!-- Class I: light motorbikes -->
+    <vType id="type_bike" accel="2" decel="4.5" sigma="0.5" length="1.0"
+           maxSpeed="40.00" mass="200" guiShape="passenger/sedan" color="128,128,128"/>
+
+    <!-- Class II: passenger cars (sedan) -->
+    <vType id="type_car" accel="2" decel="4.5" sigma="0.5" length="1"
+           maxSpeed="40.00" mass="2000" guiShape="passenger/sedan" color="128,128,128"/>
+
+    <!-- Class II: delivery vans -->
+    <vType id="type_van" accel="2.0" decel="4.0" sigma="0.5" length="1"
+           maxSpeed="30.00" mass="3500" guiShape="passenger/sedan" color="128,128,128"/>
+
+    <!-- Class III: heavy trucks -->
+    <vType id="type_truck" accel="2" decel="3.0" sigma="0.5" length="1"
+           maxSpeed="20.00" mass="40000" guiShape="passenger/sedan" color="128,128,128"/>
+
+    <!-- Stranded/slow vehicle type (≈0.01 m/s) -->
+    <vType id="type_stranded" accel="0.1" decel="4.5" sigma="0.0" length="2.5"
+           maxSpeed="0.01" mass="1500" guiShape="passenger/sedan" color="255,0,255"/>
+
+    <!-- 2. ROUTE (gate → main). Vehicles may be diverted to the alt edge at runtime. -->
+    <route id="r_main" edges="gate main" />
+    <route id="r_alt" edges="gate alt" />
+
+    <!-- Route to place a vehicle directly on MAIN -->
+    <route id="r_main_only" edges="main" />
+
+    <!-- 3. FLOWS: 0 – 3600 s, heterogeneous mix (veh/h) 
+    <flow id="flow_bike"  type="type_bike"  route="r_main" begin="0" end="1000" probability="0.05"/>
+    <flow id="flow_car"   type="type_car"   route="r_main" begin="0" end="1000" probability="0.05"/>
+    <flow id="flow_truck" type="type_truck" route="r_main" begin="0" end="1000" probability="0.05"/> -->
+
+    <!-- Single stranded/slow vehicle on MAIN at pos≈500 m 
+    <vehicle id="stranded_main" type="type_stranded" route="r_main_only"
+             depart="0" departLane="0" departPos="300" departSpeed="0.01"/> -->
+</routes>

@@ -1,0 +1,6 @@
+<!-- edges.xml -->
+<edges>
+    <edge id="gate" from="n_gateStart" to="j_split"   numLanes="1" speed="13.9"/>
+    <edge id="main" from="j_split"     to="n_mainEnd" numLanes="3" speed="36.11"/>
+    <edge id="alt"  from="j_split"     to="n_altEnd"  numLanes="1" speed="13.9"/>
+</edges>

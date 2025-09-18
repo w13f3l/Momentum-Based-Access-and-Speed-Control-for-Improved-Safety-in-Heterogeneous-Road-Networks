@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional>
+    <!-- 1 m before the gate lane ends; period 0 → TraCI polling -->
+    <inductionLoop id="access_gate"
+                   lane="gate_0"
+                   pos="100"
+                   period="1"
+                   file="access_gate.xml"/>
+
+    <!--inductionLoop id="loop_main"
+                   lane="main_0"
+                   pos="10"
+                   period="1"
+                   file="loop_main.xml"/-->
+</additional>

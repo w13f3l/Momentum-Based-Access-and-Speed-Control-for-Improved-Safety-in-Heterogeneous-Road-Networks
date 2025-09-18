@@ -1,0 +1,7 @@
+<!-- nodes.xml -->
+<nodes>
+    <node id="n_gateStart" x="0.0" y="0.0"/>
+    <node id="j_split"     x="200.0" y="0.0"/>
+    <node id="n_mainEnd"   x="1000.0" y="-200.0"/>
+    <node id="n_altEnd"    x="400.0" y="0.0"/>
+</nodes>

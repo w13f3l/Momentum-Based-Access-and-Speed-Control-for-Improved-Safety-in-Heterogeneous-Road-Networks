@@ -1,0 +1,28 @@
+# OS and editor
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Results and large artifacts
+results/
+notebooks/
+MC_100_results/
+figures/
+FINAL_results_*/
+p_*_results/
+*.npz
+*.npy
+*.log
+*.tmp
+
+# Figures generated
+figures/*.pdf
+figures/*.png
